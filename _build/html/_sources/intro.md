@@ -1,11 +1,8 @@
-# Welcome to your Jupyter Book
+# matplotlib Demos
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This set of notebooks is designed to showcase some useful tools for making production quality figures with matplotlib. More content will be added soon, so stay tuned.
 
-Check out the content pages bundled with this sample book to see more.
+To download and modify any of the notebooks, you can click on the GitHub icon at the top of the page to go to the source repository which contains all the jupyter notebooks (in the notebooks/ folder) as well as all the data that you will need to run them.
 
 ```{tableofcontents}
 ```

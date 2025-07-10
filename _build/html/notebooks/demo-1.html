@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Demo 1 &#8212; matplotlib Demos</title>
+    <title>Demo 1 - Axis and Colorbar Alignment &#8212; matplotlib Demos</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/demo-1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <link rel="prev" title="matplotlib Demos" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,8 +152,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="matplotlib Demos - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="matplotlib Demos - Home"/>`);</script>
+    <img src="../_static/mpl_logo.png" class="logo__image only-light" alt="matplotlib Demos - Home"/>
+    <script>document.write(`<img src="../_static/mpl_logo.png" class="logo__image only-dark" alt="matplotlib Demos - Home"/>`);</script>
   
   
 </a></div>
@@ -174,12 +174,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to your Jupyter Book
+                    matplotlib Demos
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Demo 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Demo 1 - Axis and Colorbar Alignment</a></li>
 </ul>
 
     </div>
@@ -223,50 +223,18 @@
 <div class="article-header-buttons">
 
 
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
+<a href="https://github.com/slucchini/matplotlib-demos" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
    title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/demo-1.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
 
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
 </a>
-</li>
-      
-  </ul>
-</div>
 
 
 
@@ -365,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Demo 1</h1>
+    <h1>Demo 1 - Axis and Colorbar Alignment</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -387,10 +355,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="demo-1">
-<h1>Demo 1<a class="headerlink" href="#demo-1" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="demo-1-axis-and-colorbar-alignment">
+<h1>Demo 1 - Axis and Colorbar Alignment<a class="headerlink" href="#demo-1-axis-and-colorbar-alignment" title="Link to this heading">#</a></h1>
 <section id="how-to-space-out-axes-within-a-figure-and-methods-to-align-colorbars">
 <h2>How to space out axes within a figure and methods to align colorbars<a class="headerlink" href="#how-to-space-out-axes-within-a-figure-and-methods-to-align-colorbars" title="Link to this heading">#</a></h2>
+<p>To run locally, you will need the packages below. All are installable via pip (<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;package-name&gt;</span></code>).</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org">matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://numpy.org">numpy</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/cmyt/">cmyt</a> - for the specific colormap used</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span><span class="o">,</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="o">,</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">pickle</span><span class="o">,</span> <span class="nn">cmyt</span>
@@ -398,7 +372,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Data is prepared from a galaxy simulation snapshot (see demo-1-prep.ipynb if interested). For this demo, we will simply load in the data to plot.</p>
+<p>Data is prepared from a galaxy simulation snapshot (see <a class="reference external" href="https://github.com/slucchini/matplotlib-demos/blob/main/notebooks/demo-1-prep.ipynb">demo-1-prep.ipynb</a> if interested). For this demo, we will simply load in the data to plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/vmap1.pkl&quot;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -414,64 +388,6 @@ document.write(`
 <p>We have two different kinds of data that we would like to plot: (1) projections of column density (images), and (2) a radial density profile (line plot). In order to combine these into a single matplotlib figure, we need to group the two projections while separating those two axes from the line plot axis. We do this by creating an additional “phantom” axis that we remove to artifically add spacing in the figure.</p>
 <p>We then need to add a colorbar for the images which we align by taking the rendered positions of the axes.</p>
 <p>Finally, we need to adjust the positions of the tick labels since the two image axes are so close together (we end up with overlapping labels). We manually specify the ticks to use and remove the last label for the first axis to prevent overlap.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Initialize the figure and axes with one extra axis to create space between the panels</span>
-<span class="n">axspace</span> <span class="o">=</span> <span class="mf">0.3</span>
-<span class="n">axpad</span> <span class="o">=</span> <span class="mf">0.03</span>
-<span class="n">aspect</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="n">axspace</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">axpad</span><span class="p">)</span>
-<span class="n">figw</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">figw</span><span class="p">,</span><span class="n">figw</span><span class="o">*</span><span class="n">aspect</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span><span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">axspace</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="n">axpad</span><span class="p">)</span>
-
-<span class="c1">### Remove the extra axis to create a gap</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
-<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
-
-<span class="c1">### Align the two image axes</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_anchor</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_anchor</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span>
-
-<span class="c1">### Plot the data</span>
-<span class="n">extent</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">],[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">]]</span>
-<span class="n">vmin</span> <span class="o">=</span> <span class="mf">1e19</span><span class="p">;</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mf">1e22</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">vmap1</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">extent</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cmyt.dusk&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span><span class="n">rasterized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;x (kpc)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;y (kpc)&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">vmap2</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">extent</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cmyt.dusk&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span><span class="n">rasterized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;z (kpc)&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rbins</span><span class="p">,</span><span class="n">dens</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\rho$ (M$_\odot$ kpc$^{-3}$)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$r$ (kpc)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
-
-<span class="c1">### Colorbar</span>
-<span class="n">axp1</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_position</span><span class="p">();</span> <span class="n">axp2</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_position</span><span class="p">()</span>
-<span class="n">cax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="n">axp1</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span><span class="n">axp1</span><span class="o">.</span><span class="n">y1</span><span class="o">+</span><span class="mf">0.025</span><span class="p">,</span><span class="n">axp2</span><span class="o">.</span><span class="n">x1</span><span class="o">-</span><span class="n">axp1</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span><span class="mf">0.025</span><span class="p">])</span>
-<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span><span class="n">location</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;N (cm$^{-2}$)&#39;</span><span class="p">)</span>
-
-<span class="c1">### Adjust the positions of the tick labels so that they don&#39;t overlap</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([])</span>
-<span class="n">xtks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">extent</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xtks</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;$</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xtk</span><span class="p">)</span> <span class="k">for</span> <span class="n">xtk</span> <span class="ow">in</span> <span class="n">xtks</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/576def2cebe553bafea9b29926a2c701cae3f58f5ad2e19eeed3365d62c65fce.png" src="../_images/576def2cebe553bafea9b29926a2c701cae3f58f5ad2e19eeed3365d62c65fce.png" />
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Initialize the figure and axes with one extra axis to create space between the panels</span>
@@ -534,6 +450,64 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/3477bc7439591c1f42f451f421b824ffda7de3ebb8376c5b86652735a4da5f57.png" src="../_images/3477bc7439591c1f42f451f421b824ffda7de3ebb8376c5b86652735a4da5f57.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Initialize the figure and axes with one extra axis to create space between the panels</span>
+<span class="n">axspace</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">axpad</span> <span class="o">=</span> <span class="mf">0.03</span>
+<span class="n">aspect</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="n">axspace</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">axpad</span><span class="p">)</span>
+<span class="n">figw</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">figw</span><span class="p">,</span><span class="n">figw</span><span class="o">*</span><span class="n">aspect</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span><span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">axspace</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="n">axpad</span><span class="p">)</span>
+
+<span class="c1">### Remove the extra axis to create a gap</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+
+<span class="c1">### Align the two image axes</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_anchor</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_anchor</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span>
+
+<span class="c1">### Plot the data</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">],[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">]]</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="mf">1e19</span><span class="p">;</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mf">1e22</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">vmap1</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">extent</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cmyt.dusk&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span><span class="n">rasterized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;x (kpc)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;y (kpc)&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">vmap2</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">extent</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cmyt.dusk&#39;</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span><span class="n">rasterized</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;z (kpc)&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rbins</span><span class="p">,</span><span class="n">dens</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\rho$ (M$_\odot$ kpc$^{-3}$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$r$ (kpc)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+
+<span class="c1">### Colorbar</span>
+<span class="n">axp1</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_position</span><span class="p">();</span> <span class="n">axp2</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_position</span><span class="p">()</span>
+<span class="n">cax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="n">axp1</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span><span class="n">axp1</span><span class="o">.</span><span class="n">y1</span><span class="o">+</span><span class="mf">0.025</span><span class="p">,</span><span class="n">axp2</span><span class="o">.</span><span class="n">x1</span><span class="o">-</span><span class="n">axp1</span><span class="o">.</span><span class="n">x0</span><span class="p">,</span><span class="mf">0.025</span><span class="p">])</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span><span class="n">location</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;N (cm$^{-2}$)&#39;</span><span class="p">)</span>
+
+<span class="c1">### Adjust the positions of the tick labels so that they don&#39;t overlap</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([])</span>
+<span class="n">xtks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">extent</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xtks</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;$</span><span class="si">{}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">xtk</span><span class="p">)</span> <span class="k">for</span> <span class="n">xtk</span> <span class="ow">in</span> <span class="n">xtks</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/576def2cebe553bafea9b29926a2c701cae3f58f5ad2e19eeed3365d62c65fce.png" src="../_images/576def2cebe553bafea9b29926a2c701cae3f58f5ad2e19eeed3365d62c65fce.png" />
 </div>
 </div>
 <p>The second example below is for a vertical layout. Much is the same except now we have the option to place the colorbar on either the side of the images or on top (using similar code to above in order to align it).</p>
@@ -645,7 +619,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">matplotlib Demos</p>
       </div>
     </a>
 </div>
